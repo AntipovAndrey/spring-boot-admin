@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  boot:
+    admin:
+      ui:
+        title: "Local Spring Boot Admin Server"
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            local:
+              - uri: http://localhost:8080
+                metadata:
+                  management.context-path: /actuator
